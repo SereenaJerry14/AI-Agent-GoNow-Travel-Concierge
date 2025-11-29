@@ -39,12 +39,11 @@ class GoNowTravelAgent:
         self.memory.load_user_data(user_memory)
         st.write(f"Planning a {stay_duration_days}-day trip to **{destination}** for **{group_details}**.")
         
-        # --- 1. Weather Check (Essential First Step) ---
+
         st.info("Step 1/6: Checking destination weather forecast...")
         weather_summary = self.weather_agent.get_weather_forecast_summary(destination, stay_duration_days)
         self.memory.update_context("weather_summary", weather_summary)
         
-        # --- 2. Transport Comparator (Module A) ---
         st.info("Step 2/6: Comparing Flight vs. Train vs. Car based on comfort, time, and budget...")
         transport_data = self.transport_agent.find_and_recommend_transport(
             origin=origin, 
@@ -55,7 +54,6 @@ class GoNowTravelAgent:
         transport_cost = transport_data.get("round_trip_cost", 0.0) 
         self.memory.update_context("transport_data", transport_data)
         
-        # --- 3. Budget Allocation (CRITICAL STEP) ---
         st.info("Step 3/6: Calculating remaining budget and setting daily limits...")
         budget_data = self.budget_agent.determine_limits(
             duration=stay_duration_days,
@@ -64,7 +62,6 @@ class GoNowTravelAgent:
         )
         self.memory.update_context("budget_limits", budget_data) 
         
-        # --- 4. Hotel Scout (Module B) ---
         st.info("Step 4/6: Searching for highly-rated last-minute accommodation...")
         accommodation_limit = budget_data.get('accommodation_limit_total', 0)
         accommodation_pick = self.hotel_agent.search_hotels(
@@ -74,7 +71,6 @@ class GoNowTravelAgent:
         )
         self.memory.update_context("accommodation_pick", accommodation_pick)
 
-        # --- 5. Packing & Personalization (Module C) ---
         st.info("Step 5/6: Generating personalized packing list and safety tips...")
         packing_list = self.personalization_agent.generate_packing_list(
             group_details=group_details, 
@@ -82,7 +78,6 @@ class GoNowTravelAgent:
         )
         safety_tips = self.safety_agent.get_safety_recommendations(destination)
         
-        # --- 6. Final Compilation ---
         st.info("Step 6/6: Compiling final structured travel plan...")
         final_report = self.planner_agent.generate_plan(
             origin, destination, group_details, budget, start_date, stay_duration_days,
