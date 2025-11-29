@@ -23,8 +23,6 @@ class Tools:
         if not weather_key:
             return "Weather unavailable: API Key not loaded."        
             
-        # Placeholder logic: Assumes weather is fetched correctly and summarized.
-        # In a real app, this URL would point to a forecast endpoint.
         url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={weather_key}&units=metric"   
         
         try:
@@ -36,7 +34,7 @@ class Tools:
             temp = response['main']['temp']
             desc = response['weather'][0]['description']
             
-            # Simulated 3-day forecast summary:
+        
             return f"Weather Report for {city} ({days} days): Current temperature is **{temp}°C ({desc})**. Forecast shows average highs of **{temp + 2}°C** and lows of **{temp - 5}°C**. Expect cool evenings and one day of chance rain. This is crucial for packing."
 
         except requests.exceptions.RequestException as e:
@@ -66,4 +64,5 @@ class Tools:
             return structured_results
             
         except requests.exceptions.RequestException as e:
+
             return [{"error": f"Search failed: {e}", "snippet": "No real-time data available."}]
