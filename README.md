@@ -83,9 +83,6 @@ pip install -r requirements.txt
 ### 4\. Configure API Keys (The `.env` File)
 
 You need API keys for the Gemini LLM and the Serper Search tool. Create a file named **`.env`** in the root directory and fill it with your keys.
-
-**DO NOT COMMIT THIS FILE TO GITHUB.** It is excluded via `.gitignore`.
-
 **.env**
 
 ```
