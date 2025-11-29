@@ -28,9 +28,9 @@ The system operates as a **Core Orchestrator** (`agent_core.py`) that manages a 
 | **BudgetAgent** | Calculates safe limits for accommodation and daily spending. | `accommodation_limit`, `daily_spending_limit` |
 | **HotelAgent** | Searches for safe accommodation options within the budget limit. | `accommodation_pick` |
 | **WeatherAgent** | Fetches the current forecast for packing guidance. | `weather_summary` |
-| **FoodAgent** | Recommends restaurants based on dietary preferences. | `food_recs` (top 3) |
-| **EventsAgent** | Finds local tourist-friendly events and activities. | `events` (top 3) |
-| **SafetyAgent** | Provides critical safety and scam advisories for the location. | `safety_tips` (5 bullet points) |
+| **FoodAgent** | Recommends restaurants based on dietary preferences. | `food_recs`  |
+| **EventsAgent** | Finds local tourist-friendly events and activities. | `events` |
+| **SafetyAgent** | Provides critical safety and scam advisories for the location. | `safety_tips` |
 | **TravelPlannerAgent** | Compiles all data into the final, comprehensive report. | Complete `README.md` |
 
 
@@ -41,7 +41,7 @@ The system operates as a **Core Orchestrator** (`agent_core.py`) that manages a 
 
 Follow these steps to get a copy of the project running on your local machine.
 
-### 1. Clone the Repository (Skip if uploading directly)
+### 1. Clone the Repository
 
 If you used Git:
 ```bash
