@@ -31,7 +31,7 @@ The system operates as a **Core Orchestrator** (`agent_core.py`) that manages a 
 | **FoodAgent** | Recommends restaurants based on dietary preferences. | `food_recs`  |
 | **EventsAgent** | Finds local tourist-friendly events and activities. | `events` |
 | **SafetyAgent** | Provides critical safety and scam advisories for the location. | `safety_tips` |
-| **TravelPlannerAgent** | Compiles all data into the final, comprehensive report. | Complete `README.md` |
+| **TravelPlannerAgent** | Compiles all data into the final, comprehensive report. | `plan_travel` |
 
 
 
