@@ -11,13 +11,11 @@ def save_memory(key, value):
     print(f"DEBUG: Saving '{key}': '{value}' to memory.")
     USER_MEMORY_BANK[key] = value
 
-# Add a travel history entry
 def add_trip_history(trip_info):
     if "Group_History" not in USER_MEMORY_BANK:
         USER_MEMORY_BANK["Group_History"] = []
     USER_MEMORY_BANK["Group_History"].append(trip_info)
 
-# Clear all memory
 def clear_memory():
     global USER_MEMORY_BANK
     USER_MEMORY_BANK = {}
@@ -49,4 +47,5 @@ class Memory:
         """Retrieves the current trip context."""
         if key:
             return self._trip_context.get(key)
+
         return self._trip_context
