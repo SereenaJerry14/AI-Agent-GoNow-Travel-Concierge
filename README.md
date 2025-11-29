@@ -72,7 +72,6 @@ google-genai
 streamlit
 python-dotenv
 requests
-amadeus # If you intend to use the transport_agent's original Amadeus logic
 ```
 
 Then run:
@@ -98,10 +97,6 @@ SERPER_API_KEY="YOUR_SERPER_API_KEY_HERE"
 
 # For OpenWeatherMap (used by WeatherAgent)
 OPENWEATHER_API_KEY="YOUR_OPENWEATHER_API_KEY_HERE"
-
-# If using Amadeus (TransportAgent)
-AMADEUS_API_KEY="YOUR_AMADEUS_API_KEY_HERE"
-AMADEUS_API_SECRET="YOUR_AMADEUS_API_SECRET_HERE"
 ```
 
 -----
