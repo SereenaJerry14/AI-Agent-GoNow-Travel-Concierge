@@ -102,7 +102,7 @@ OPENWEATHER_API_KEY="YOUR_OPENWEATHER_API_KEY_HERE"
 
 You can run the agent in two modes:
 
-### A. Console Mode (For Debugging)
+### A. Console Mode
 
 This runs the main script with hardcoded inputs defined in `main.py`.
 
@@ -110,7 +110,7 @@ This runs the main script with hardcoded inputs defined in `main.py`.
 python main.py
 ```
 
-### B. Interactive Web UI (Recommended)
+### B. Interactive Web UI
 
 Use Streamlit to launch the interactive web application.
 
