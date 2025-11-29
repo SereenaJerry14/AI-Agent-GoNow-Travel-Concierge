@@ -122,6 +122,3 @@ streamlit run ui.py
 ```
 
 A browser window will open, allowing you to input the origin, destination, budget, and group details before generating the plan.
-
-```
-```
